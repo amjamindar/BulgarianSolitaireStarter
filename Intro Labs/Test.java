@@ -11,6 +11,8 @@ public class Test
     {
         PairShare num = new PairShare();
         //num.CountDown(5);
-        num.CountUp(5);
+        //num.sum(1,5);
+        System.out.println(num.reverse("Ayush"));
+        
     }
 }

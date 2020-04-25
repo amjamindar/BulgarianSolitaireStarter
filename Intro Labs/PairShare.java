@@ -1,10 +1,5 @@
 
-/**
- * Write a description of class PairShare here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+// Ayush Jamindar
 public class PairShare
 {
     public PairShare ()
@@ -25,18 +20,32 @@ public class PairShare
         }
     }
     
-    public int CountUp(int num)
+    public int sum(int start, int finish)
     {
-        int n = 0;
-        if (n == num)
-        {
-             System.out.println(num);
-             return num;   
-        }
-        else
-        {
-            System.out.println(n);
-            return CountUp(n+1);
-        }
+         if (start == finish)
+         {
+            System.out.println(finish);              
+            return finish;
+          }
+         else
+         {
+            System.out.println(start);
+            return start + sum(start +1, finish);
+           }
     }
+     
+    public String reverse(String phrase)
+    {
+        if (phrase.length() <= 1)
+            return phrase;
+        else
+            return reverse(phrase.substring(1,phrase.length())) + phrase.charAt(0);
+    }
+    
+    public boolean prime(int num)
+    {
+        
+    }    
+    
+    
 }

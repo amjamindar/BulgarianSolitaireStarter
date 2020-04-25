@@ -2,10 +2,10 @@
 dependency1.from=Test
 dependency1.to=PairShare
 dependency1.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=836
+editor.fx.0.width=1548
+editor.fx.0.x=-6
+editor.fx.0.y=-6
 objectbench.height=106
 objectbench.width=1345
 package.divider.horizontal=0.6
