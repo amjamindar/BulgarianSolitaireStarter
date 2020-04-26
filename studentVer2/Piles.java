@@ -1,30 +1,46 @@
 import java.util.ArrayList;
 import java.util.Random;
-/**
- * A class that plays Bulgarian Solitare.
- * Version 3: Complete the isDone method.
-*/
+
 public class Piles
 {
-   /**
-      Checks whether the game is done.
-      @return true when the piles have size
-      1, 2, 3, 4, 5, 6, 7, 8, and 9, in some order.
-   */
    public boolean isDone()
    {
-      /*
-         We are done when we have some combination of the numbers
-         1 through 9 in the piles. Therefore, we can first check to
-         make sure we have exactly 9 piles so we don't waste our time.
-         We also need to take care that we have the exact numbers and
-         avoid a situation like  1 1 3 4 5 6 7 8 10  which means we
-         still aren't done.
-      */
-      . . .
-
-
-
+      
+      //We are done when we have some combination of the numbers
+      //1 through 9 in the piles. Therefore, we can first check to
+      //make sure we have exactly 9 piles so we don't waste our time.
+      //We also need to take care that we have the exact numbers and
+      //avoid a situation like  1 1 3 4 5 6 7 8 10  which means we
+      //still aren't done.
+      
+      
+     
+      int [] pile2 = new int[10];
+     
+      if(piles.size() == 9)
+      {
+          for (int i = 0; i<9; i++)
+          {
+              for(int x = 1; x<=9; x++)
+              {
+                  if (piles.get(i)== x)
+                    pile2[x-1]++;
+                }
+            }
+        }
+      
+       else
+        { 
+          return false;
+        }
+      
+      
+      for(int y = 0; y<9; y++)
+      {
+          if(pile2[y] == 1)
+            return true;
+        }
+      return false;
    }
 
    private ArrayList<Integer> piles;
@@ -67,11 +83,25 @@ public class Piles
       return piles.toString();
    }
 
-   /**
-      Play one round of the game.
-   */
+   //Play one round of the game.
+   
    public void playRound()
-   {
-	   // insert your code for ver 1
-   }
+   {   int length = 0;
+       for (int i = 0; i < piles.size(); i++)
+       {
+           length++;
+           if (piles.get(i) != 1)
+           {
+               piles.set(i,piles.get(i).intValue()-1);
+           }
+           else
+           {
+               piles.remove(i);
+               i--;
+            }
+        }
+        piles.add(length);
+    }
 }
+
+
